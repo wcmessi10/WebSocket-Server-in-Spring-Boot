@@ -1,0 +1,23 @@
+server:
+  port: 8089
+  servlet:
+    context-path: /
+    application-display-name: websocket-server
+  jetty:
+    enabled: true
+spring:
+  application:
+    name: websocket-server
+  ssl:
+    bundle:
+      jks: # JKS 형식의 Keystore 설정
+        server: # 서버용 설정
+          key: # 키 설정
+            alias: "server"  # 키 별칭 (Keystore에 등록된 키의 이름)
+          keystore: # Keystore 설정
+            location: "C:/Users/이희두/Desktop/WebSocketServer/mykeystore.p12"  # Keystore 파일의 위치 (classpath:를 사용하여 classpath에 있는 리소스를 지정)
+            password: "changeit"  # Keystore의 암호
+            type: "PKCS12"  # Keystore의 유형 (PKCS12 형식)
+
+
+
